@@ -18,5 +18,5 @@ from create import views
 
 urlpatterns = [
     path('',views.home),
-    path('names',views.names),
+    path('password/',views.password),
 ]
