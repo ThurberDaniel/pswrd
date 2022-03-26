@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Password</title>
+<title>Password Maker</title>
 </head>
 <body>
 
 <div class="w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
     Created by Thunder 👤 DAN
-  </div><br><br>
+  </div><br>
+  <a href="{% url 'about' %}">About</a>
+
+  <br><br>
   <div class="w3-display-middle">
       <form action="password">
         <select name="length">
@@ -32,6 +35,8 @@
       <p>{{ password }}</p>
     <h1 class="w3-jumbo w3-animate-center"></h1>
   </div>
+  <br><br>
+  <a href ="{% url 'about'%}">About</a>
 </div>
 
 </body>
