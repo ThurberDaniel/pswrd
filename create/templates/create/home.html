@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Password Maker</title>
-</head>
-<body>
-
-<div class="w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Created by Thunder 👤 DAN
-  </div><br>
-  <a href="{% url 'about' %}">About</a>
-
-  <br><br>
-  <div class="w3-display-middle">
-      <form action="password">
-        <select name="length">
-            <option value='5'>5</option>
-            <option value='7' selected='selected'>7</option>
-            <option value='10'>10</option>
-            <option value='15'>15</option>
-            <option value='100'>100</option>
-        </select>
-        <br>
-        <input type="checkbox" name="uppercase">Uppercase
-        <br>
-        <br>
-        <input type="checkbox" name="numbers">Uppercase
-        <br>   
-             <br>
-        <input type="checkbox" name="special">Special Characters
-        <br>
-    <input type="submit" value="Enter">
-      </form>
-      <p>{{ password }}</p>
-    <h1 class="w3-jumbo w3-animate-center"></h1>
-  </div>
-  <br><br>
-  <a href ="{% url 'about'%}">About</a>
-</div>
-
-</body>
+  <head>
+    <title>Password Maker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+      Home
+    <a href="{% url 'about'%}">About</a>
+    <div class="container text-center">
+        <img src="https://previews.dropbox.com/p/thumb/ABfFbNFgWA5czpqvI8Vwf950ha8tC8K860XCVhXTgA8q1qLWeTaPkHjmXyoQHjEQPsqfedFqk99_GQaPmsV8pn2QbGJ_EwxSBCFun1W2YlYzrkTJZI8OV-pj6PVCatQKTJwMAgLWM4d4H-vYsKPp7gpCaginm9HAUYarw6Br__R4UaFm3HqVp2ofNGpfN4fqR8jIIfwOQNfnGWy_mpd9csFK56ZiUVYX982By4KvortL9U6muUwpBliSaXPAhZVlkNZyj563865W3fi2MJVKLuyNcOr-cfGAhGcuM4N9Ay0uIXsfLZLqgQZmd8zfG0w5ownHNxuAV5agQ5IwnQ6QqEz1FFuou6sxa5AEBynB2h1DVe5_d1uLw6qqS9pZ5L8Y0sw/p.png">
+      <br>
+      <br>
+      <br>
+      <b>Length of Password</b>
+      <div class="w3-display-middle">
+        <form action="password">
+          <select name="length">
+            <option value="5">5</option>
+            <option value="7" selected="selected">7</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="30">30</option>
+          </select>
+          <br>
+          <br>
+          <input type="checkbox" name="uppercase" />Uppercase
+          <br>
+          <input type="checkbox" name="numbers" />Numbers
+          <br>
+          <input type="checkbox" name="special" />Special Characters
+          <br>
+          <input type="submit" value="Enter"  class = "btn btn-success">
+        </form>
+        <h1 class="w3-jumbo w3-animate-center"></h1>
+        <p>Note* Password Baker has a default of using lowercase letters</p>
+      </div>
+      <br />
+      <h5>Created by Daniel 👤 in Idaho</h5>
+    </div>
+  </body>
 </html>
